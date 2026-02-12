@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Woodberry's Quiet Orchard - A calm digital loyalty experience">
+    <title>Woodberry's Quiet Orchard</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Main App -->
+        <main id="app" class="app-content">
+            <header class="header">
+                <h1 class="title">Woodberry's Quiet Orchard</h1>
+                <p class="subtitle">Patience in growth, grace in harvest</p>
+            </header>
+
+            <!-- Orchard Display -->
+            <section class="orchard-section">
+                <div class="orchard-display">
+                    <svg id="tree-illustration" class="tree-illustration" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Dynamic SVG content loaded by JavaScript -->
+                    </svg>
+                </div>
+
+                <!-- Progress Indicator -->
+                <div class="progress-container">
+                    <div class="progress-bars">
+                        <div class="progress-bar" id="progress-0"></div>
+                        <div class="progress-bar" id="progress-1"></div>
+                        <div class="progress-bar" id="progress-2"></div>
+                        <div class="progress-bar" id="progress-3"></div>
+                        <div class="progress-bar" id="progress-4"></div>
+                        <div class="progress-bar" id="progress-5"></div>
+                    </div>
+                </div>
+
+                <!-- Stage Label -->
+                <p class="stage-label" id="stage-label">Seed</p>
+            </section>
+
+            <!-- Status Message -->
+            <div class="message-section">
+                <p class="message" id="status-message">Begin when you are ready.</p>
+            </div>
+
+            <!-- Water Button -->
+            <section class="action-section">
+                <button id="water-button" class="water-button">Water Your Orchard</button>
+            </section>
+
+            <!-- Info Footer -->
+            <footer class="footer">
+                <p class="footer-text">Once per week, gently tend to your orchard.</p>
+            </footer>
+        </main>
+
+        <!-- Harvest Screen Overlay -->
+        <div id="harvest-overlay" class="harvest-overlay hidden">
+            <div class="harvest-modal">
+                <div class="harvest-content">
+                    <h2 class="harvest-title">Harvest Season has Arrived</h2>
+                    
+                    <div class="harvest-info">
+                        <p class="harvest-date" id="harvest-date"></p>
+                        <p class="harvest-code-label">Verification Code</p>
+                        <p class="harvest-code" id="harvest-code"></p>
+                    </div>
+
+                    <p class="harvest-message">Please present this to our staff for verification.</p>
+
+                    <button id="close-harvest-button" class="harvest-close-button">Return to Orchard</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
