@@ -1,78 +1,217 @@
+/* ============================================
+   Woodberry's Quiet Orchard - Production Styles
+   ============================================ */
+
 :root {
-    --primary-color: #4CAF50;
-    --secondary-color: #FFFFFF;
-    --accent-color: #FFC107;
-    --text-color: #333333;
-    --background-color: #F4F4F9;
-    --header-height: 60px;
-    --footer-height: 40px;
-    --font-family: 'Arial', sans-serif;
+    --cream: #F5F2EB;
+    --dark-text: #3C3C3C;
+    --accent: #8B7355;
+    --accent-light: #A89080;
+    --border: #D4CFC5;
+    --success: #6B8E5F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
 }
 
 body {
-    margin: 0;
-    font-family: var(--font-family);
-    color: var(--text-color);
-    background-color: var(--background-color);
+    font-family: Georgia, 'Garamond', serif;
+    background-color: var(--cream);
+    color: var(--dark-text);
+    line-height: 1.6;
 }
 
-header {
-    background-color: var(--primary-color);
-    height: var(--header-height);
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
 }
 
-.header-title {
-    color: var(--secondary-color);
-    font-size: 24px;
+.app-content {
+    width: 100%;
+    max-width: 600px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: var(--dark-text);
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: 0.5px;
 }
 
 .orchard-section {
-    padding: 20px;
-    background-color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.progress-indicator {
-    background-color: var(--accent-color);
-    height: 10px;
-    border-radius: 5px;
-}
-
-.stage-label {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.message-section {
-    margin: 20px;
-    padding: 15px;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-}
-
-.action-button {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.action-button:hover {
-    background-color: var(--accent-color);
-}
-
-footer {
-    height: var(--footer-height);
-    background-color: var(--primary-color);
+.orchard-display {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--secondary-color);
+    margin-bottom: 40px;
+    min-height: 280px;
+}
+
+.tree-illustration {
+    width: 200px;
+    height: 300px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.05));
+    animation: gentleFloat 3s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.progress-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.progress-bars {
+    display: flex;
+    gap: 8px;
+}
+
+.progress-bar {
+    width: 16px;
+    height: 3px;
+    background-color: var(--border);
+    transition: background-color 0.6s ease;
+    border-radius: 2px;
+}
+
+.progress-bar.active {
+    background-color: var(--success);
+}
+
+.stage-label {
+    font-size: 1.3rem;
+    color: var(--accent);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.message-section {
+    margin-bottom: 40px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message {
+    font-size: 1.1rem;
+    color: var(--dark-text);
+    text-align: center;
+    line-height: 1.8;
+    animation: messageSlide 0.5s ease;
+}
+
+@keyframes messageSlide {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.action-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.water-button {
+    padding: 18px 48px;
+    font-size: 1.1rem;
+    font-family: Georgia, serif;
+    letter-spacing: 1px;
+    background-color: var(--accent);
+    color: var(--cream);
+    border: 2px solid var(--accent);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.water-button:hover {
+    background-color: var(--accent-light);
+    border-color: var(--accent-light);
+    transform: translateY(-2px);
+}
+
+.water-button:active {
+    transform: translateY(0);
+}
+
+.water-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border);
+}
+
+.footer-text {
+    font-size: 0.95rem;
+    color: var(--accent);
+    font-style: italic;
 }
 
 .harvest-overlay {
@@ -81,22 +220,152 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(60, 60, 60, 0.7);
     display: flex;
-    justify-content: center;
     align-items: center;
-    visibility: hidden;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease;
 }
 
-.harvest-overlay.active {
-    visibility: visible;
+.harvest-overlay.hidden {
+    display: none;
 }
 
-@media (max-width: 768px) {
-    .header-title {
-        font-size: 20px;
+.harvest-modal {
+    background-color: var(--cream);
+    border-radius: 4px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    padding: 60px 40px;
+    animation: slideUp 0.6s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
-    .action-button {
-        width: 100%;
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.harvest-content {
+    text-align: center;
+}
+
+.harvest-title {
+    font-size: 2rem;
+    color: var(--dark-text);
+    margin-bottom: 40px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+.harvest-info {
+    background-color: rgba(107, 142, 95, 0.08);
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+
+.harvest-date {
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.harvest-code-label {
+    font-size: 0.9rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    font-weight: normal;
+}
+
+.harvest-code {
+    font-size: 2.5rem;
+    color: var(--dark-text);
+    letter-spacing: 4px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.harvest-message {
+    font-size: 1rem;
+    color: var(--dark-text);
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.harvest-close-button {
+    padding: 14px 40px;
+    font-size: 1rem;
+    font-family: Georgia, serif;
+    letter-spacing: 1px;
+    background-color: var(--accent);
+    color: var(--cream);
+    border: 2px solid var(--accent);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.harvest-close-button:hover {
+    background-color: var(--accent-light);
+    border-color: var(--accent-light);
+    transform: translateY(-2px);
+}
+
+.harvest-close-button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 16px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .tree-illustration {
+        width: 160px;
+        height: 240px;
+    }
+
+    .orchard-section {
+        margin-bottom: 40px;
+    }
+
+    .water-button {
+        padding: 16px 40px;
+        font-size: 1rem;
+    }
+
+    .harvest-modal {
+        padding: 40px 24px;
+    }
+
+    .harvest-title {
+        font-size: 1.6rem;
+    }
+
+    .harvest-code {
+        font-size: 2rem;
     }
 }
