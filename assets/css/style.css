@@ -1,0 +1,56 @@
+/* Woodberry's Quiet Orchard CSS Styling */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #5e9b5e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+nav {
+    margin: 10px 0;
+}
+
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #4a7c4a;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #5e9b5e;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
